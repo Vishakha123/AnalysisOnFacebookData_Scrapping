@@ -14,13 +14,10 @@ def req_fb(req):
     
 req = "67919847338/posts?fields=comments,likes.limit(10)"    
 obj = req_fb(req).json()        
-
 data = []
-
 #obj = obj['/posts']
 i=0
-while True:
-    
+while True: 
     try:
         time.sleep(random.randint(2,5))
         data.extend(obj['data'])
